@@ -1,0 +1,399 @@
+[
+  {
+    "mId": "166282",
+    "pageName": "家庭教育 AI 智能服务",
+    "shareDesc": "AI 辅助家庭教育，让育儿更懂孩子、更有方法。",
+    "templateType": 4,
+    "color": "blue",
+    "agents": [
+      {
+        "id": "17422",
+        "name": "心镜·心理状态深度分析大师",
+        "greeting": "Hi~我是心镜·心理状态深度分析大师",
+        "slogan": "👋 你好，我是由创客匠人王老师打造的「心镜·心理状态深度分析大师」。\n\n我会根据你的回答一步步了解，帮你看清困扰背后的原因，找到当下最需要优先调整的方向。🌱",
+        "placeholder": "请和我对话吧",
+        "cover": "/sites/ykyw/agents/17422.png",
+        "capabilities": [
+          {
+            "icon": "search-2",
+            "label": "情绪溯源",
+            "content": "识别情绪触发点，找到困扰背后的真实原因"
+          },
+          {
+            "icon": "report-2",
+            "label": "模式识别",
+            "content": "发现反复出现的思维与应对模式，看清心理循环"
+          },
+          {
+            "icon": "direction-2",
+            "label": "调整建议",
+            "content": "给出清晰、具体、可执行的下一步行动方向"
+          }
+        ],
+        "questions": [
+          "总焦虑不安怎么调整？",
+          "关系中反复内耗的原因？",
+          "压力大情绪低落怎么办？",
+          "如何识别自己的情绪模式？",
+          "自我否定如何改善？"
+        ],
+        "shortcuts": []
+      },
+      {
+        "id": "17493",
+        "name": "家镜·家庭教育解决方案专家",
+        "greeting": "Hi~我是家镜·家庭教育解决方案专家",
+        "slogan": "你好，欢迎来到「家镜·家庭教育解决方案智能体」👨‍👩‍👧‍👦\n\n请把刚刚生成的【家镜·亲子关系深度分析大师\n】的分析结果复制粘贴给我。我会基于其中的核心问题、互动循环和潜在隐患，帮你找到当前最该先调整的一件事，并给出具体做法、沟通话术和三日执行方案。🌱",
+        "placeholder": "请和我对话吧",
+        "cover": "/sites/ykyw/agents/17493.png",
+        "capabilities": [
+          {
+            "icon": "target-2",
+            "label": "方案定制",
+            "content": "根据痛点分析生成专属改善方案，明确优先解决目标"
+          },
+          {
+            "icon": "chat-2",
+            "label": "话术指导",
+            "content": "提供可直接使用的亲子沟通话术，场景化应对"
+          },
+          {
+            "icon": "schedule-2",
+            "label": "执行规划",
+            "content": "三日执行方案，每日具体行动清晰可操作"
+          }
+        ],
+        "questions": [
+          "孩子拖延写作业怎么破？",
+          "孩子情绪激动如何回应？",
+          "如何建立有效的家庭规则？",
+          "亲子冲突后怎么修复关系？",
+          "怎样判断方案是否有效？"
+        ],
+        "shortcuts": []
+      },
+      {
+        "id": "17383",
+        "name": "家镜·亲子关系深度分析大师",
+        "greeting": "Hi~我是家镜·亲子关系深度分析大师",
+        "slogan": "👋 你好，我是由创客匠人王老师打造的「家镜·亲子关系深度分析大师」。\n\n我会通过深入了解你的实际情况，帮你看清亲子问题背后的原因，找到当下最需要优先解决的关键问题。🌱\n\n点击下方按钮“开始分析”即可体验！\n",
+        "placeholder": "请和我对话吧",
+        "cover": "/sites/ykyw/agents/17383.png",
+        "capabilities": [
+          {
+            "icon": "diagnose-2",
+            "label": "痛点诊断",
+            "content": "还原真实家庭场景，识别孩子行为背后的深层原因"
+          },
+          {
+            "icon": "trending-2",
+            "label": "循环识别",
+            "content": "发现亲子互动中反复出现的模式，找到问题固化根源"
+          },
+          {
+            "icon": "security-2",
+            "label": "隐患预警",
+            "content": "指出当前最值得警惕的风险，看清问题继续发展的影响"
+          }
+        ],
+        "questions": [
+          "孩子不听话的真正原因？",
+          "亲子沟通为何总是冲突？",
+          "孩子沉迷手机怎么分析？",
+          "学习习惯差是态度问题吗？",
+          "如何打破亲子互动僵局？"
+        ],
+        "shortcuts": []
+      }
+    ],
+    "products": [
+      {
+        "id": "4623772",
+        "name": "果妈阅读400+经典书",
+        "price": "399.00",
+        "payType": 2,
+        "prodType": 111,
+        "cover": "/sites/ykyw/products/4623772.jpg",
+        "sourceUrl": "https://wxe946737b2f64dfcd.lrn.nineteenj.cn/kpv2p/ykyw/#/homePage/course/voice?courseId=4623772&ckFrom=5"
+      },
+      {
+        "id": "224630",
+        "name": "如何学好育儿第一步",
+        "price": "268.00",
+        "payType": 2,
+        "prodType": 12,
+        "cover": "/sites/ykyw/products/224630.jpg",
+        "sourceUrl": "https://wxe946737b2f64dfcd.lrn.nineteenj.cn/kpv2p/ykyw/#/mall/shopDetail/shopDetail?shopNo=224630"
+      },
+      {
+        "id": "4619943",
+        "name": "每日冥想疗愈音频",
+        "price": "6.80",
+        "payType": 2,
+        "prodType": 111,
+        "cover": "/sites/ykyw/products/4619943.jpg",
+        "sourceUrl": "https://wxe946737b2f64dfcd.lrn.nineteenj.cn/kpv2p/ykyw/#/homePage/course/voice?courseId=4619943&ckFrom=5"
+      },
+      {
+        "id": "4572224",
+        "name": "别让琐事耗干了专业：给心理老师的AI智能体落地指南",
+        "price": "0.00",
+        "payType": 1,
+        "prodType": 112,
+        "cover": "/sites/ykyw/products/4572224.jpg",
+        "sourceUrl": "https://wxe946737b2f64dfcd.lrn.nineteenj.cn/kpv2p/ykyw/#/homePage/course/imgText?courseId=4572224&ckFrom=5"
+      },
+      {
+        "id": "4557317",
+        "name": "如何利用AI智能体赋能家庭教育，轻松获客与提升转化",
+        "price": "0.00",
+        "payType": 1,
+        "prodType": 112,
+        "cover": "/sites/ykyw/products/4557317.jpg",
+        "sourceUrl": "https://wxe946737b2f64dfcd.lrn.nineteenj.cn/kpv2p/ykyw/#/homePage/course/imgText?courseId=4557317&ckFrom=5"
+      },
+      {
+        "id": "501002",
+        "name": "普拉提一对一指导",
+        "price": "0.00",
+        "payType": 1,
+        "prodType": 406,
+        "cover": "/sites/ykyw/products/501002.png",
+        "sourceUrl": "https://wxe946737b2f64dfcd.lrn.nineteenj.cn/kpv2p/ykyw/#/homePage/booking/bookingServiceDetail?apId=501002&ckFrom=5"
+      }
+    ],
+    "sourceUrl": "https://wxe946737b2f64dfcd.lrn.nineteenj.cn/kpv2p/ykyw/#/homePage/microPage/microPage?refereeId=xzr8jrz&mId=166282"
+  },
+  {
+    "mId": "166280",
+    "pageName": "AI 助手中心",
+    "shareDesc": "你的随身 AI 助手，让工作生活更轻松。",
+    "templateType": 2,
+    "color": "blue",
+    "agents": [
+      {
+        "id": "17505",
+        "name": "驾考通·刷题教练",
+        "greeting": "Hi~我是驾考通·刷题教练",
+        "slogan": "🚘欢迎来到「驾考通·科一科四刷题教练」！这里可以练习科目一和科目四题库，支持顺序刷题、随机练习、专项训练、错题复习和模拟考试。📚你只需要告诉我想练“科目一”还是“科目四”，我会逐题出题、自动判分，并讲清楚易错点和记忆口诀。准备好了就点击下方按钮开始刷题吧✅",
+        "placeholder": "请和我对话吧",
+        "cover": "/sites/ykyw/agents/17505.png",
+        "capabilities": [],
+        "questions": [
+          "科目一有多少道题？",
+          "怎么开始模拟考试？",
+          "交通标志题总是记不住怎么办？",
+          "多选题总是漏选怎么办？",
+          "离考试90分还差多少？"
+        ],
+        "shortcuts": [
+          {
+            "icon": "learning",
+            "label": "顺序刷题",
+            "content": "帮我从第一题开始顺序刷科目一的题"
+          },
+          {
+            "icon": "trophy",
+            "label": "模拟考试",
+            "content": "我想进行一次科目一模拟考试"
+          },
+          {
+            "icon": "target",
+            "label": "专项练习",
+            "content": "帮我练习交通标志相关的题目"
+          },
+          {
+            "icon": "refresh",
+            "label": "错题复习",
+            "content": "把之前做错的题拿出来重新练习"
+          }
+        ]
+      },
+      {
+        "id": "17428",
+        "name": "食刻轻盈瘦身搭子",
+        "greeting": "Hi~我是食刻轻盈瘦身搭子",
+        "slogan": "👋你好，我是由创客匠人王老师打造的食刻轻盈瘦身搭子。\n\n把每次摄入直接拍照发给我📷，我会帮你记录热量、计算今日剩余摄入，并告诉你下一餐该怎么吃，点击下方即刻开启瘦身之旅。\n",
+        "placeholder": "请和我对话吧",
+        "cover": "/sites/ykyw/agents/17428.png",
+        "capabilities": [],
+        "questions": [
+          "怎么建立我的减脂档案？",
+          "今天已经吃了多少热量？",
+          "减脂期一日三餐怎么搭配？",
+          "能帮我出一份周报吗？",
+          "高蛋白低碳水的食物有哪些？"
+        ],
+        "shortcuts": [
+          {
+            "icon": "image",
+            "label": "拍照记录",
+            "content": "我拍了一张午餐照片，帮我记录热量"
+          },
+          {
+            "icon": "basic-info",
+            "label": "建立档案",
+            "content": "我想先建立我的减脂目标档案"
+          },
+          {
+            "icon": "report",
+            "label": "今日记录",
+            "content": "查看今天已经记录了哪些饮食"
+          },
+          {
+            "icon": "inspiration",
+            "label": "下餐建议",
+            "content": "下一顿吃什么比较好？"
+          }
+        ]
+      },
+      {
+        "id": "17484",
+        "name": "周报总结助手",
+        "greeting": "Hi~我是周报总结助手",
+        "slogan": "👋 请直接上传周报、月报、需求文档、产品规划或版本计划，我会按老板汇报视角，帮你整理周总结、周计划、三个核心或月度汇报。",
+        "placeholder": "请和我对话吧",
+        "cover": "/sites/ykyw/agents/17484.png",
+        "capabilities": [],
+        "questions": [
+          "周报用什么格式输出？",
+          "怎么提炼三个核心目标？",
+          "能帮我整理月度汇报吗？",
+          "有哪些风险需要重点标注？",
+          "汇报给老板该怎么写比较好？"
+        ],
+        "shortcuts": [
+          {
+            "icon": "report",
+            "label": "整理周报",
+            "content": "帮我根据上传的资料整理本周周报"
+          },
+          {
+            "icon": "schedule",
+            "label": "整理月报",
+            "content": "帮我整理本月工作总结和下月计划"
+          },
+          {
+            "icon": "target",
+            "label": "三个核心",
+            "content": "按三个核心格式整理本周工作"
+          },
+          {
+            "icon": "security",
+            "label": "风险梳理",
+            "content": "帮我梳理当前项目中的风险事项"
+          }
+        ]
+      }
+    ],
+    "products": [],
+    "sourceUrl": "https://wxe946737b2f64dfcd.lrn.nineteenj.cn/kpv2p/ykyw/#/homePage/microPage/microPage?refereeId=xzr8jrz&mId=166280"
+  },
+  {
+    "mId": "166279",
+    "pageName": "家庭成长中心",
+    "shareDesc": "陪你读懂家庭关系，让成长从家开始。",
+    "templateType": 1,
+    "color": "blue",
+    "agents": [
+      {
+        "id": "17559",
+        "name": "心醒｜女性成长陪伴师",
+        "greeting": "Hi~我是心醒｜女性成长陪伴师",
+        "slogan": "你好呀，我是心醒，你的女性成长陪伴师🌸。我不做评判，只愿用温柔与清醒，陪你梳理情绪、看见关系模式、理解内心卡点💡。在这里，你可以安心卸下防备，从混乱走向清醒，从委屈走回自己🦋。我会结合专业方法，给你听得懂、做得到的建议，帮你一步步拿回生活的选择权✨。此刻，你最想聊聊最近困扰你的一件事，还是某种挥之不去的情绪呢？🍵",
+        "placeholder": "请和我对话吧",
+        "cover": "/sites/ykyw/agents/17559.png",
+        "capabilities": [],
+        "questions": [],
+        "shortcuts": [
+          {
+            "icon": "help",
+            "label": "聊聊情绪",
+            "content": "我最近情绪很低落，想找人聊聊"
+          },
+          {
+            "icon": "collaboration",
+            "label": "关系梳理",
+            "content": "帮我分析我在亲密关系中的相处模式"
+          },
+          {
+            "icon": "inspiration",
+            "label": "内在探索",
+            "content": "我想了解自己的内在卡点和深层信念"
+          },
+          {
+            "icon": "report",
+            "label": "深度分析",
+            "content": "我想做一次完整的内在状态分析报告"
+          }
+        ]
+      },
+      {
+        "id": "17553",
+        "name": "一分钟测出你孩子的牙齿隐患",
+        "greeting": "Hi~我是一分钟测出你孩子的牙齿隐患",
+        "slogan": "🦷孩子总爱吃软的、嚼硬东西躲着吃、爱吃糖，或者晚上刷牙总是糊弄？这些看似普通的小习惯，只要1分钟，帮你快速判断孩子最需要警惕的问题，并给出明确的检查建议。\n\n点击下方按钮立即开始第1题👇\n",
+        "placeholder": "请和我对话吧",
+        "cover": "/sites/ykyw/agents/17553.png",
+        "capabilities": [],
+        "questions": [],
+        "shortcuts": [
+          {
+            "icon": "health",
+            "label": "开始测试",
+            "content": "我想给孩子做一个牙齿风险快速测试"
+          },
+          {
+            "icon": "query",
+            "label": "牙齿隐患",
+            "content": "孩子不爱吃硬东西，是不是牙齿有问题"
+          },
+          {
+            "icon": "help",
+            "label": "检查建议",
+            "content": "孩子牙齿有哪些常见隐患需要注意"
+          },
+          {
+            "icon": "schedule",
+            "label": "预约检查",
+            "content": "孩子牙齿有问题，想预约专业口腔检查"
+          }
+        ]
+      },
+      {
+        "id": "17493",
+        "name": "家镜·家庭教育解决方案专家",
+        "greeting": "Hi~我是家镜·家庭教育解决方案专家",
+        "slogan": "你好，欢迎来到「家镜·家庭教育解决方案智能体」👨‍👩‍👧‍👦\n\n请把刚刚生成的【家镜·亲子关系深度分析大师\n】的分析结果复制粘贴给我。我会基于其中的核心问题、互动循环和潜在隐患，帮你找到当前最该先调整的一件事，并给出具体做法、沟通话术和三日执行方案。🌱",
+        "placeholder": "请和我对话吧",
+        "cover": "/sites/ykyw/agents/17493.png",
+        "capabilities": [],
+        "questions": [],
+        "shortcuts": [
+          {
+            "icon": "service",
+            "label": "亲子诊断",
+            "content": "我的亲子关系遇到了问题，想找到解决方案"
+          },
+          {
+            "icon": "chat",
+            "label": "沟通改善",
+            "content": "孩子不听话，我该怎么和他沟通"
+          },
+          {
+            "icon": "task",
+            "label": "改善方案",
+            "content": "我想制定一个具体的家庭教育改善方案"
+          },
+          {
+            "icon": "direction",
+            "label": "执行建议",
+            "content": "孩子行为习惯不好，给我具体的执行建议"
+          }
+        ]
+      }
+    ],
+    "products": [],
+    "sourceUrl": "https://wxe946737b2f64dfcd.lrn.nineteenj.cn/kpv2p/ykyw/#/homePage/microPage/microPage?refereeId=xzr8jrz&mId=166279"
+  }
+]
