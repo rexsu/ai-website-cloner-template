@@ -61,6 +61,16 @@ export function priceLabel(product: Product): string {
   return `￥${product.price}`;
 }
 
+export function productHref(product: Product): { href: string; external: boolean } {
+  if (product.prodType === 111) {
+    return {
+      href: `/homePage/course/voice?courseId=${product.id}&ckFrom=5`,
+      external: false,
+    };
+  }
+  return { href: product.sourceUrl, external: true };
+}
+
 export function sourceChatUrl(agentId: string, message?: string): string {
   const query = new URLSearchParams({ aikbId: agentId });
   if (message) query.set("initMsg", message);

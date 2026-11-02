@@ -9,6 +9,7 @@ import { useEffect, useMemo, useState, type CSSProperties } from "react";
 import {
   microPages,
   priceLabel,
+  productHref,
   themeAssets,
   themeVars,
   type Agent,
@@ -514,13 +515,16 @@ function TemplateFour({
       {page.products.length ? (
         <section className="product-block">
           <h2 className="section-title">商品推荐</h2>
-          {page.products.map((product) => (
+          {page.products.map((product) => {
+            const target = productHref(product);
+            return (
             <a
               key={product.id}
               className="product-row"
-              href={product.sourceUrl || page.sourceUrl}
-              target="_blank"
-              rel="noreferrer"
+              href={target.href || page.sourceUrl}
+              {...(target.external
+                ? { target: "_blank", rel: "noreferrer" }
+                : {})}
             >
               <img className="product-cover" src={product.cover} alt="" />
               <span className="product-meta">
@@ -531,7 +535,8 @@ function TemplateFour({
                 </span>
               </span>
             </a>
-          ))}
+            );
+          })}
         </section>
       ) : null}
       <div className="tpl4-space" />
