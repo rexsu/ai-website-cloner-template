@@ -50,65 +50,65 @@ export function VoicePage({ course, requestedId }: VoicePageProps) {
       <main className="voice-page">
         <header className="voice-nav">
           <Link href="/m/166282" aria-label="返回">
-            ‹
+            <i className="iconfont icon-fanhui" />
           </Link>
           <div className="nav-actions">
-            <button className="nav-chip follow" type="button" onClick={() => showToast("关注需要在微信里完成")}>
-              <i>♥</i>关注
+            <button className="nav-chip" type="button" onClick={() => showToast("关注需要在微信里完成")}>
+              <img src="/sites/ykyw/course/nav-follow.png" alt="" />
+              关注
             </button>
-            <Link className="nav-chip home" href="/m/166282">
-              <i>⌂</i>首页
+            <Link className="nav-chip" href="/m/166282">
+              <img src="/sites/ykyw/course/nav-home.png" alt="" />
+              首页
             </Link>
           </div>
         </header>
 
-        <section className="player">
+        <section className="audio-shell">
           <button className="poster-btn" type="button" onClick={() => showToast("海报需要微信分享，本地不会生成")}>
+            <img src="/sites/ykyw/course/poster.png" alt="" />
             海报
           </button>
-          <div className="player-stage">
-            <div className="wave" aria-hidden="true">
-              {[18, 32, 12, 26, 40, 16, 28].map((height) => (
-                <span key={height} style={{ height: `${height}%` }} />
+          <div className="audio-stage">
+            <div className="audio-playing-ani" aria-hidden="true">
+              {Array.from({ length: 36 }, (_, index) => (
+                <span key={index} />
               ))}
             </div>
-            <img className="cover-card" src={course.cover} alt="" />
-            <div className="wave" aria-hidden="true">
-              {[22, 36, 14, 30, 18, 34, 12].map((height) => (
-                <span key={`r-${height}`} style={{ height: `${height}%` }} />
-              ))}
-            </div>
+            <img className="audio-cover" src={course.cover} alt="" />
           </div>
-          <div className="time-row">
-            <span>00:00</span>
-            <div className="track" />
-            <span>00:00</span>
-          </div>
-          <div className="transport">
-            <button className="side-control" type="button" onClick={() => showToast("当前没有可播放的课时")}>
-              单节播放
+          <div className="audio-progress">
+            <button className="icon-hit" type="button" aria-label="后退15秒" onClick={() => showToast("未购买，不能拖动进度")}>
+              <i className="iconfont icon-kuaitui15miao1" />
             </button>
-            <div className="play-row">
-              <button className="skip-btn" type="button" aria-label="后退15秒" onClick={() => showToast("未购买，不能拖动进度")}>
-                -15
-              </button>
-              <button
-                className="play-btn"
-                type="button"
-                aria-label="播放"
-                onClick={() => {
-                  if (course.restricted) showToast("指定用户可购买");
-                  else setGate(true);
-                }}
-              >
-                ▶
-              </button>
-              <button className="skip-btn" type="button" aria-label="前进15秒" onClick={() => showToast("未购买，不能拖动进度")}>
-                +15
-              </button>
+            <div className="audio-rail">
+              <span>00:00</span>
+              <div className="audio-line" />
+              <span>00:00</span>
             </div>
-            <button className="side-control" type="button" onClick={() => setSpeedOpen(true)}>
-              倍速
+            <button className="icon-hit" type="button" aria-label="前进15秒" onClick={() => showToast("未购买，不能拖动进度")}>
+              <i className="iconfont icon-kuaijin15miao1" />
+            </button>
+          </div>
+          <div className="audio-controls">
+            <button className="mode-btn" type="button" onClick={() => showToast("当前没有可播放的课时")}>
+              <i className="iconfont icon-danjiebofang2" />
+              <span>单节播放</span>
+            </button>
+            <button
+              className="play-circle"
+              type="button"
+              aria-label="播放"
+              onClick={() => {
+                if (course.restricted) showToast("指定用户可购买");
+                else setGate(true);
+              }}
+            >
+              <i className="iconfont icon-bofang9" />
+            </button>
+            <button className="mode-btn" type="button" onClick={() => setSpeedOpen(true)}>
+              <i className="iconfont icon-beishu1" />
+              <span>倍速</span>
             </button>
           </div>
         </section>
@@ -121,19 +121,25 @@ export function VoicePage({ course, requestedId }: VoicePageProps) {
         <div className="vip-card">
           <button className="vip-row" type="button" onClick={() => showToast("开通会员需要微信登录，本地不会开通")}>
             <span>{course.vipNote}</span>
-            <span>›</span>
+            <i className="iconfont icon-crmyoujiantou" />
           </button>
           <button className="vip-row" type="button" onClick={() => showToast("开通会员需要微信登录，本地不会开通")}>
             <span>{course.svipNote}</span>
-            <span>›</span>
+            <i className="iconfont icon-crmyoujiantou" />
           </button>
         </div>
 
         <h1 className="course-title">{course.name}</h1>
         <div className="course-meta">
-          <span>共{course.lessons}节</span>
-          <span>{course.plays}人收听</span>
-          <span>{course.validity}</span>
+          <span>
+            <i className="iconfont icon-kechengxianxing" />共{course.lessons}节
+          </span>
+          <span>
+            <i className="iconfont icon-yanjing1" />{course.plays}人收听
+          </span>
+          <span>
+            <i className="iconfont icon-jiantou" />{course.validity}
+          </span>
           {course.canGift ? (
             <button className="gift-btn" type="button" onClick={() => showToast("赠送需要微信登录，本地不会下单")}>
               赠送
@@ -144,6 +150,7 @@ export function VoicePage({ course, requestedId }: VoicePageProps) {
             type="button"
             onClick={() => setLiked((value) => !value)}
           >
+            <i className={`iconfont ${liked ? "icon-yishoucang1" : "icon-shoucang1"}`} />
             {liked ? "已收藏" : "收藏"}
           </button>
         </div>
@@ -241,15 +248,8 @@ export function VoicePage({ course, requestedId }: VoicePageProps) {
         <>
           <button className="gate" type="button" aria-label="关闭" onClick={() => setGate(false)} />
           <section className="gate-card" role="dialog" aria-label="浏览器限制">
-            <button className="icon-btn gate-close" type="button" onClick={() => setGate(false)} aria-label="关闭">
-              ×
-            </button>
-            <svg className="gate-art" viewBox="0 0 80 80" aria-hidden="true">
-              <rect x="18" y="16" width="44" height="54" rx="6" fill="#e7f0ff" />
-              <rect x="26" y="28" width="28" height="4" rx="2" fill="#b9cff5" />
-              <rect x="26" y="36" width="20" height="4" rx="2" fill="#b9cff5" />
-              <path d="M48 46l16 8-8 2 2 8z" fill="#8eb6ff" />
-            </svg>
+            <button className="iconfont icon-guanbi gate-close" type="button" onClick={() => setGate(false)} aria-label="关闭" />
+            <img className="gate-illu" src="/sites/ykyw/course/disable-play.png" alt="" />
             <p>当前课程不支持在此浏览器访问</p>
             <button className="scan-btn" type="button" onClick={() => { setGate(false); setQrOpen(true); }}>
               扫码开始学习

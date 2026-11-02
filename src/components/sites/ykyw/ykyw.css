@@ -2095,3 +2095,162 @@ body:has(.ykyw-app) {
   color: #666;
   font-size: 0.5rem;
 }
+
+
+@font-face {
+  font-family: "ykyw-iconfont";
+  src: url("/sites/ykyw/fonts/iconfont.woff2") format("woff2");
+  font-display: swap;
+}
+
+.ykyw-app .iconfont {
+  font-family: "ykyw-iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+.icon-fanhui:before { content: "\e600"; }
+.icon-crmyoujiantou:before { content: "\e60e"; }
+.icon-jiantou:before { content: "\e635"; }
+.icon-kechengxianxing:before { content: "\e69c"; }
+.icon-yanjing1:before { content: "\e6bb"; }
+.icon-beishu1:before { content: "\e7ef"; }
+.icon-kuaitui15miao1:before { content: "\e802"; }
+.icon-kuaijin15miao1:before { content: "\e803"; }
+.icon-danjiebofang2:before { content: "\e80d"; }
+.icon-bofang9:before { content: "\e812"; }
+.icon-shoucang1:before { content: "\e9b5"; }
+.icon-yishoucang1:before { content: "\e823"; }
+.icon-guanbi:before { content: "\eca0"; }
+
+.voice-nav .icon-fanhui { font-size: 0.6rem; }
+.nav-chip img { width: 0.9rem; height: 0.9rem; margin-right: 0.12rem; }
+
+.audio-shell {
+  position: relative;
+  height: 11.3rem;
+  overflow: hidden;
+  background: #fff;
+}
+.poster-btn {
+  position: absolute;
+  top: 1.6rem;
+  right: 0;
+  z-index: 4;
+  display: flex;
+  height: 1.1rem;
+  align-items: center;
+  padding: 0 0.25rem 0 0.2rem;
+  border: 0;
+  border-radius: 0.6rem 0 0 0.6rem;
+  background: #fff4e8;
+  color: #333;
+  font-size: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.poster-btn img { width: 0.7rem; height: 0.7rem; margin-right: 0.08rem; }
+.audio-stage {
+  position: relative;
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.audio-cover {
+  position: relative;
+  z-index: 2;
+  width: 4.7rem;
+  height: 3.9rem;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+.audio-progress {
+  display: flex;
+  align-items: center;
+  padding: 0 0.45rem;
+}
+.icon-hit {
+  border: 0;
+  background: transparent;
+  color: #333;
+  cursor: pointer;
+}
+.icon-kuaitui15miao1, .icon-kuaijin15miao1 { font-size: 1.1rem; }
+.audio-rail {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0 0.35rem;
+  color: #333;
+  font-size: 0.45rem;
+}
+.audio-line {
+  height: 0.1rem;
+  flex: 1;
+  border-radius: 1rem;
+  background: #eceff3;
+}
+.audio-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.55rem;
+}
+.mode-btn {
+  display: flex;
+  width: 2rem;
+  flex-direction: column;
+  align-items: center;
+  border: 0;
+  background: transparent;
+  color: #333;
+  font-size: 0.4rem;
+  cursor: pointer;
+}
+.icon-danjiebofang2, .icon-beishu1 { font-size: 0.8rem; color: #333; }
+.play-circle {
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1.4rem;
+  border: 0;
+  border-radius: 50%;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+}
+.icon-bofang9 { font-size: 1.05rem; }
+.course-meta .iconfont { margin-right: 0.06rem; font-size: 0.5rem; }
+.fav-btn .iconfont { font-size: 0.9rem; }
+.fav-btn.is-on .iconfont { color: #ffb400; }
+.vip-row .iconfont { font-size: 0.45rem; }
+.voice-page .buy-bar button.is-locked,
+.voice-page .buy-bar a.is-buy {
+  height: 1.6rem;
+  border-radius: 0.9rem;
+  font-size: 0.7rem;
+}
+.gate-illu {
+  width: 9.5rem;
+  height: auto;
+  margin: 0.1rem auto 0.2rem;
+}
+.gate-close {
+  float: right;
+  border: 0;
+  background: transparent;
+  color: #999;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+.voice-page .audio-playing-ani{position:absolute;top:0;bottom:0;left:0;right:0;margin:auto;width:14rem;height:2.9rem;display:flex;align-items:center}.voice-page .audio-playing-ani span{display:inline-flex;background:#f6f7f8;width:.2rem;height:.29rem;border-radius:.35rem;margin-right:.2rem}.voice-page .audio-playing-ani span:first-child{animation:audioplay 1.5s linear 2s infinite}.voice-page .audio-playing-ani span:nth-child(2){animation:audioplay 1.5s linear 1.8s infinite}.voice-page .audio-playing-ani span:nth-child(3){animation:audioplay 1.5s linear 1.6s infinite}.voice-page .audio-playing-ani span:nth-child(4){animation:audioplay 1.5s linear 1.4s infinite}.voice-page .audio-playing-ani span:nth-child(5){animation:audioplay 1.5s linear 1.2s infinite}.voice-page .audio-playing-ani span:nth-child(6){animation:audioplay 1.5s linear 1s infinite}.voice-page .audio-playing-ani span:nth-child(7){animation:audioplay 1.5s linear .8s infinite}.voice-page .audio-playing-ani span:nth-child(8){animation:audioplay 1.5s linear .6s infinite}.voice-page .audio-playing-ani span:nth-child(9){animation:audioplay 1.5s linear .4s infinite}.voice-page .audio-playing-ani span:nth-child(10){animation:audioplay 1.5s linear .2s infinite}.voice-page .audio-playing-ani span:nth-child(11){animation:audioplay 1.5s linear 0s infinite}.voice-page .audio-playing-ani span:nth-child(12){animation:audioplay 1.5s linear .2s infinite}.voice-page .audio-playing-ani span:nth-child(13){animation:audioplay 1.5s linear .4s infinite}.voice-page .audio-playing-ani span:nth-child(14){animation:audioplay 1.5s linear .6s infinite}.voice-page .audio-playing-ani span:nth-child(15){animation:audioplay 1.5s linear .8s infinite}.voice-page .audio-playing-ani span:nth-child(16){animation:audioplay 1.5s linear 1s infinite}.voice-page .audio-playing-ani span:nth-child(17){animation:audioplay 1.5s linear 1.2s infinite}.voice-page .audio-playing-ani span:nth-child(18){animation:audioplay 1.5s linear 1.4s infinite}.voice-page .audio-playing-ani span:nth-child(19){animation:audioplay 1.5s linear 1.6s infinite}.voice-page .audio-playing-ani span:nth-child(20){animation:audioplay 1.5s linear 1.8s infinite}.voice-page .audio-playing-ani span:nth-child(21){animation:audioplay 1.5s linear 2s infinite}.voice-page .audio-playing-ani span:nth-child(22){animation:audioplay 1.5s linear 1.8s infinite}.voice-page .audio-playing-ani span:nth-child(23){animation:audioplay 1.5s linear 1.6s infinite}.voice-page .audio-playing-ani span:nth-child(24){animation:audioplay 1.5s linear 1.4s infinite}.voice-page .audio-playing-ani span:nth-child(25){animation:audioplay 1.5s linear 1.2s infinite}.voice-page .audio-playing-ani span:nth-child(26){animation:audioplay 1.5s linear 1s infinite}.voice-page .audio-playing-ani span:nth-child(27){animation:audioplay 1.5s linear .8s infinite}.voice-page .audio-playing-ani span:nth-child(28){animation:audioplay 1.5s linear .6s infinite}.voice-page .audio-playing-ani span:nth-child(29){animation:audioplay 1.5s linear .4s infinite}.voice-page .audio-playing-ani span:nth-child(30){animation:audioplay 1.5s linear .2s infinite}.voice-page .audio-playing-ani span:nth-child(31){animation:audioplay 1.5s linear 0s infinite}.voice-page .audio-playing-ani span:nth-child(32){animation:audioplay 1.5s linear .2s infinite}.voice-page .audio-playing-ani span:nth-child(33){animation:audioplay 1.5s linear .4s infinite}.voice-page .audio-playing-ani span:nth-child(34){animation:audioplay 1.5s linear .6s infinite}.voice-page .audio-playing-ani span:nth-child(35){animation:audioplay 1.5s linear .8s infinite}.voice-page .audio-playing-ani span:nth-child(36){animation:audioplay 1.5s linear 1s infinite}
+@keyframes audioplay {
+  0% { height: 0.29rem; }
+  50% { height: 2.9rem; }
+  100% { height: 0.29rem; }
+}
