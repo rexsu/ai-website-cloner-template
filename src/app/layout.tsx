@@ -1,20 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import "./qizai.css";
 
 export const metadata: Metadata = {
-  title: "Website Clone",
-  description: "Pixel-perfect website clone",
+  title: {
+    default: "七仔 · 七仔同行与智能戒指",
+    template: "%s · 七仔",
+  },
+  description: "七智的心理健康陪伴七仔，以及一枚用于睡眠与情绪记录的智能戒指。不提供诊断。",
 };
 
 export default function RootLayout({
@@ -23,10 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
+    <html lang="zh-CN" className="h-full antialiased">
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
