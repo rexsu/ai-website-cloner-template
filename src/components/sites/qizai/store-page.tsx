@@ -13,7 +13,10 @@ export function StorePage() {
             <br />
             而不是从价格开始。
           </h1>
-          <p className="mt-5 max-w-xl text-[17px] leading-relaxed">七仔戒指与七仔同行一起出现。价格、支付和退换政策都还没有公布。</p>
+          <p className="mt-5 max-w-xl text-[17px] leading-relaxed">七仔戒指一次性 ¥1299（支付宝）。退换政策与会员是否另收费待确认。</p>
+          <Link href="/checkout" className="qz-btn qz-btn-blue mt-6 inline-flex">
+            ¥1299 一次性购买
+          </Link>
         </div>
       </section>
       <section className="bg-[#f7f1e8] px-5 pb-20 md:px-8">
@@ -25,7 +28,7 @@ export function StorePage() {
                 <p className="text-sm text-[#6a6560]">现在能看的</p>
                 <h2 className="qz-serif mt-1 text-4xl">七仔戒指</h2>
               </div>
-              <p className="text-sm">价格待公布</p>
+              <p className="text-sm">¥1299 一次性</p>
             </div>
           </Link>
           <div className="rounded-[28px] bg-[#1c1b1a] p-6 text-[#f7f1e8]">

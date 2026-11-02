@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="560" viewBox="0 0 480 560">
+  <rect width="480" height="560" rx="28" fill="#f7f1e8"/>
+  <rect x="40" y="40" width="400" height="400" rx="20" fill="#fff" stroke="#1677ff" stroke-width="3"/>
+  <rect x="90" y="90" width="80" height="80" fill="#1677ff"/>
+  <rect x="310" y="90" width="80" height="80" fill="#1677ff"/>
+  <rect x="90" y="310" width="80" height="80" fill="#1677ff"/>
+  <rect x="190" y="190" width="100" height="100" fill="#1677ff" opacity="0.85"/>
+  <text x="240" y="480" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="22" fill="#2c2a26">支付宝收款码 · 待替换</text>
+  <text x="240" y="512" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="16" fill="#6a6560">¥1299 · 一次性</text>
+</svg>

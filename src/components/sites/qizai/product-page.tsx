@@ -15,15 +15,20 @@ export function ProductPage() {
   return (
     <PageShell tone="dark" hero>
       <section className="relative flex min-h-[100svh] items-center justify-center overflow-hidden bg-[#5c5e66] text-center text-[#f7f1e8]">
-        <img src="/sites/qizai/product/hero-silver.png" alt="" className="pointer-events-none absolute -left-[18%] top-1/2 hidden w-[58vw] max-w-[760px] -translate-y-1/2 md:block" />
-        <img src="/sites/qizai/product/hero-rose.png" alt="" className="pointer-events-none absolute -right-[22%] top-[8%] hidden w-[62vw] max-w-[820px] md:block" />
+        <img src="/sites/qizai/product/hero-silver.webp" alt="" className="pointer-events-none absolute -left-[18%] top-1/2 hidden w-[58vw] max-w-[760px] -translate-y-1/2 md:block" />
+        <img src="/sites/qizai/product/hero-rose.webp" alt="" className="pointer-events-none absolute -right-[22%] top-[8%] hidden w-[62vw] max-w-[820px] md:block" />
         <img src="/sites/qizai/product/finish-silver.png" alt="银色七仔戒指" className="absolute bottom-24 w-48 md:hidden" />
         <div className="relative z-10 px-6 pt-28">
           <p className="text-sm tracking-[0.18em]">七仔戒指</p>
           <h1 className="qz-serif mt-4 text-6xl leading-none md:text-8xl">融进日常</h1>
-          <Link href="#finishes" className="qz-btn qz-btn-light mt-10 inline-flex">
-            看颜色
-          </Link>
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+            <Link href="/checkout" className="qz-btn qz-btn-light inline-flex">
+              ¥1299 一次性购买
+            </Link>
+            <Link href="#finishes" className="qz-btn qz-btn-light inline-flex opacity-90">
+              看颜色
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -36,7 +41,7 @@ export function ProductPage() {
               它服务七仔同行：诊后与心理健康陪伴。指标数量、传感器精度都不在这里报数。
             </p>
           </div>
-          <img src="/sites/qizai/product/black-side.png" alt="戒指侧面" className="mx-auto w-full max-w-md" />
+          <img src="/sites/qizai/product/black-side.webp" alt="戒指侧面" className="mx-auto w-full max-w-md" />
         </div>
       </section>
 
@@ -54,7 +59,7 @@ export function ProductPage() {
 
       <section className="bg-[#f7f1e8] px-5 py-16 md:px-8">
         <div className="relative mx-auto max-w-[1100px] overflow-hidden rounded-[28px] bg-[#141414]">
-          <img src="/sites/qizai/product/hand.png" alt="戴着戒指的手" className="h-[520px] w-full object-cover object-[center_20%]" />
+          <img src="/sites/qizai/product/hand.webp" alt="戴着戒指的手" className="h-[520px] w-full object-cover object-[center_20%]" loading="lazy" decoding="async" />
           <button type="button" className="absolute bottom-8 left-1/2 -translate-x-1/2 rounded-full bg-white/90 px-5 py-3 text-sm text-[#2c2a26]" onClick={() => setFilm(true)}>
             看结构说明
           </button>
@@ -66,7 +71,7 @@ export function ProductPage() {
           <div>
             <p className="text-[12px] tracking-[0.18em] text-[#6a6560]">选择外观</p>
             <h2 className="qz-h2 mt-3">{finish.name}</h2>
-            <p className="mt-3 text-[#5e5954]">{finish.note} · 价格待公布</p>
+            <p className="mt-3 text-[#5e5954]">{finish.note} · ¥1299 一次性</p>
             <div className="mt-6 grid grid-cols-3 gap-3 sm:grid-cols-6">
               {finishes.map((item) => (
                 <button
@@ -76,16 +81,21 @@ export function ProductPage() {
                   className={`rounded-2xl bg-white p-2 ring-2 ${finish.id === item.id ? "ring-[#2a72de]" : "ring-transparent"}`}
                   aria-pressed={finish.id === item.id}
                 >
-                  <img src={item.image} alt="" className="aspect-square w-full object-contain" />
+                  <img src={item.image} alt="" className="aspect-square w-full object-contain" loading="lazy" decoding="async" />
                   <span className="mt-1 block text-center text-xs">{item.name}</span>
                 </button>
               ))}
             </div>
-            <Link href={`/contact?topic=${finish.id}`} className="qz-btn qz-btn-blue mt-8 inline-flex">
-              预约了解这款
-            </Link>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link href="/checkout" className="qz-btn qz-btn-blue inline-flex">
+                ¥1299 去支付
+              </Link>
+              <Link href={`/contact?topic=${finish.id}`} className="qz-btn qz-btn-dark inline-flex">
+                预约了解这款
+              </Link>
+            </div>
           </div>
-          <img src={finish.life} alt={`${finish.name}色戒指佩戴`} className="w-full rounded-[28px] object-cover" />
+          <img src={finish.life} alt={`${finish.name}色戒指佩戴`} className="w-full rounded-[28px] object-cover" loading="lazy" decoding="async" />
         </div>
       </section>
 

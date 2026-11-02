@@ -46,8 +46,8 @@ export function HomePage() {
   return (
     <PageShell hero>
       <section className="relative min-h-[100svh] overflow-hidden bg-[#f4e7dc]">
-        <img src="/sites/qizai/home/hero-desktop.jpg" alt="" className="absolute inset-0 hidden h-full w-full object-cover object-[72%_center] md:block" />
-        <img src="/sites/qizai/home/hero-mobile.jpg" alt="戴着银色智能戒指的手" className="absolute inset-0 h-full w-full object-cover object-top md:hidden" />
+        <img src="/sites/qizai/home/hero-desktop.jpg" alt="" fetchPriority="high" decoding="async" className="absolute inset-0 hidden h-full w-full object-cover object-[72%_center] md:block" />
+        <img src="/sites/qizai/home/hero-mobile.jpg" alt="戴着银色智能戒指的手" fetchPriority="high" decoding="async" className="absolute inset-0 h-full w-full object-cover object-top md:hidden" />
         <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-[1200px] flex-col justify-end px-5 pb-16 pt-36 md:justify-center md:px-8 md:pb-0">
           <div className="max-w-2xl">
             <h1 className="qz-h1 text-[#2c2a26]">
@@ -57,9 +57,14 @@ export function HomePage() {
             <p className="mt-6 max-w-sm text-[17px] leading-relaxed text-[#3c3834]">
               用一枚智能戒指看清睡眠、情绪和恢复。想说话的时候，七仔都在。
             </p>
-            <Link href="/store/rings/qizai-ring" className="qz-btn qz-btn-blue mt-8 inline-flex">
-              选购戒指
-            </Link>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link href="/checkout" className="qz-btn qz-btn-blue inline-flex">
+                ¥1299 一次性购买
+              </Link>
+              <Link href="/store/rings/qizai-ring" className="qz-btn qz-btn-dark inline-flex">
+                了解戒指
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -88,7 +93,7 @@ export function HomePage() {
         >
           {featureCards.map((card) => (
             <article key={card.id} className="relative h-[460px] w-[78vw] max-w-[340px] shrink-0 snap-start overflow-hidden rounded-[22px] bg-[#1c1b1a] text-white">
-              <img src={card.image} alt="" className="absolute inset-0 h-full w-full object-cover" />
+              <img src={card.image} alt="" className="absolute inset-0 h-full w-full object-cover" loading="lazy" decoding="async" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-black/25" />
               <div className="relative flex h-full flex-col justify-between p-4">
                 <div className="flex items-start justify-between gap-3">

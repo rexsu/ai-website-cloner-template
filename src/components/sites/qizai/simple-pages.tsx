@@ -153,11 +153,16 @@ export function CartPage() {
   return (
     <PageShell>
       <div className="mx-auto max-w-xl px-5 py-20 text-center">
-        <h1 className="qz-serif text-5xl">购物袋是空的</h1>
-        <p className="mt-4 text-[#5e5954]">价格与支付尚未公布，这里不会进入结账。</p>
-        <Link href="/store" className="qz-btn qz-btn-dark mt-8 inline-flex">
-          返回选购
-        </Link>
+        <h1 className="qz-serif text-5xl">购物袋</h1>
+        <p className="mt-4 text-[#5e5954]">七仔戒指 · ¥1299 一次性。目前不支持多件加购，直接去支付宝结账即可。</p>
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+          <Link href="/checkout" className="qz-btn qz-btn-blue inline-flex">
+            去支付 ¥1299
+          </Link>
+          <Link href="/store" className="qz-btn qz-btn-dark inline-flex">
+            返回选购
+          </Link>
+        </div>
       </div>
     </PageShell>
   );
