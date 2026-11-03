@@ -51,8 +51,7 @@ export async function createOneTimeOrder(
       outTradeNo,
       amountYuan,
       qrImagePath: ALIPAY_ENV.qrImagePath,
-      message:
-        "支付宝开放平台密钥未配置，已切换到商户收款码。请将真实收款码放到 public/sites/qizai/payment/alipay-qr.png。",
+      message: "",
     };
   }
 

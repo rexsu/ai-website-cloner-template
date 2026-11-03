@@ -115,11 +115,9 @@ export function CheckoutPage() {
                 <p className="mt-4 text-sm leading-relaxed text-[#2c2a26]">
                   请用支付宝扫码支付 <strong>¥1299</strong>。备注可填本页单号。
                 </p>
-                <p className="mt-3 text-xs leading-relaxed text-[#6a6560]">{data.message}</p>
-                <p className="mt-4 text-xs text-[#6a6560]">
-                  替换真实收款码：把图片放到{" "}
-                  <code className="rounded bg-white px-1">public/sites/qizai/payment/alipay-qr.png</code>
-                </p>
+                {data.message ? (
+                  <p className="mt-3 text-xs leading-relaxed text-[#6a6560]">{data.message}</p>
+                ) : null}
               </>
             ) : null}
           </section>
