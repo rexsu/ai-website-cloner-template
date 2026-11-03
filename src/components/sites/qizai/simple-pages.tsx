@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import { ringSizes } from "./content";
 import { PageShell } from "./site-chrome";
 
 export function ArticlePage({
@@ -61,13 +62,24 @@ export function SizingPage() {
   return (
     <PageShell>
       <div className="mx-auto max-w-2xl px-5 py-16">
-        <h1 className="qz-h1">先量，再决定。</h1>
-        <ol className="mt-8 list-decimal space-y-4 pl-5 text-[17px] leading-relaxed">
-          <li>用一条细线绕过打算佩戴的手指根部，不要勒紧。</li>
-          <li>记下周长。晚上手会略肿，建议傍晚再量一次。</li>
-          <li>七仔的尺码对照表尚未公布。请不要套用其他品牌的号数。</li>
-        </ol>
-        <p className="mt-6 text-sm text-[#6a6560]">记忆中的可售尺寸范围未确认。此页不提供 6–13 号的毫米换算。</p>
+        <h1 className="qz-h1">7 到 14 号。</h1>
+        <p className="mt-4 text-[17px] leading-relaxed">内径来自京东 JCRing X3 的尺码名称。用细线绕过指根，傍晚再量一次。号数不要套用别的品牌。</p>
+        <table className="mt-8 w-full text-left text-[16px]">
+          <thead>
+            <tr className="border-b border-[#2c2a26]/15 text-sm text-[#6a6560]">
+              <th className="py-2 font-medium">号</th>
+              <th className="py-2 font-medium">戒指内直径</th>
+            </tr>
+          </thead>
+          <tbody>
+            {ringSizes.map((row) => (
+              <tr key={row.size} className="border-b border-[#2c2a26]/10">
+                <td className="py-3">{row.size}</td>
+                <td className="py-3">{row.diameter}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
         <Link href="/contact?topic=sizing" className="qz-btn qz-btn-blue mt-8 inline-flex">
           让我们帮你看尺寸
         </Link>

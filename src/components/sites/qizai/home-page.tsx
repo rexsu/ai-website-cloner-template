@@ -45,27 +45,27 @@ export function HomePage() {
 
   return (
     <PageShell hero>
-      <section className="relative min-h-[100svh] overflow-hidden bg-[#f4e7dc]">
-        <img src="/sites/qizai/home/hero-desktop.jpg" alt="" fetchPriority="high" decoding="async" className="absolute inset-0 hidden h-full w-full object-cover object-[72%_center] md:block" />
-        <img src="/sites/qizai/home/hero-mobile.jpg" alt="戴着银色智能戒指的手" fetchPriority="high" decoding="async" className="absolute inset-0 h-full w-full object-cover object-top md:hidden" />
-        <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-[1200px] flex-col justify-end px-5 pb-16 pt-36 md:justify-center md:px-8 md:pb-0">
-          <div className="max-w-2xl">
-            <h1 className="qz-h1 text-[#2c2a26]">
-              <span className="block">佩上</span>
-              <span className="block whitespace-nowrap">更从容的生活</span>
-            </h1>
-            <p className="mt-6 max-w-sm text-[17px] leading-relaxed text-[#3c3834]">
-              用一枚智能戒指看清睡眠、情绪和恢复。想说话的时候，七仔都在。
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/checkout" className="qz-btn qz-btn-blue inline-flex">
-                ¥1299 一次性购买
-              </Link>
-              <Link href="/store/rings/qizai-ring" className="qz-btn qz-btn-dark inline-flex">
-                了解戒指
-              </Link>
-            </div>
+      <section className="grid min-h-[100svh] bg-[#f4e7dc] pt-[7.2rem] md:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] md:pt-0">
+        <div className="relative z-10 order-2 flex flex-col justify-end px-5 pb-12 pt-8 md:order-1 md:justify-center md:px-10 md:pb-0 md:pt-36 lg:px-16">
+          <p className="text-sm tracking-[0.16em] text-[#6a6560]">JCRing X3 · 七仔同行</p>
+          <h1 className="qz-h1 mt-4 text-[#2c2a26]">
+            <span className="block">佩上</span>
+            <span className="block whitespace-nowrap">更从容的生活</span>
+          </h1>
+          <p className="mt-6 max-w-md text-[17px] leading-relaxed text-[#3c3834]">
+            七仔用的是友宏医疗 JCRing X3。戒指记下睡眠、脉率和日常状态，想说话的时候，七仔都在。
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link href="/checkout" className="qz-btn qz-btn-blue inline-flex">
+              ¥1299 一次性购买
+            </Link>
+            <Link href="/store/rings/qizai-ring" className="qz-btn qz-btn-dark inline-flex">
+              看这枚戒指
+            </Link>
           </div>
+        </div>
+        <div className="relative order-1 min-h-[78vw] md:order-2 md:min-h-full">
+          <img src="/sites/qizai/jcring/heart-photo.jpg" alt="手指上的 JCRing X3" className="absolute inset-0 h-full w-full object-cover object-center" />
         </div>
       </section>
 

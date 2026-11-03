@@ -21,7 +21,7 @@ export function WhyPage() {
         <div className="mx-auto grid max-w-[1000px] gap-4 md:grid-cols-3">
           {[
             ["随时可聊", "你开口，七仔才进入这段对话。主动来找你，还没有被确认。"],
-            ["戒指负责夜晚", "睡眠和恢复相关的信号留在手指上。传感器清单与精度待确认。"],
+            ["戒指负责夜晚", "硬件是 JCRing X3：PPG、加速度计和蓝牙。血氧与脉率走注册范围，睡眠记录不作诊疗依据。"],
             ["诊后还能带着走", "复诊前可以把一周的休息和心情放在同一处。如何对接门诊，待确认。"],
           ].map(([title, body]) => (
             <article key={title} className="rounded-[22px] bg-[#f7f1e8] p-6">

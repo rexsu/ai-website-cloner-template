@@ -259,7 +259,7 @@ export function SiteFooter() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-[1200px] flex-col gap-3 px-5 py-6 text-[13px] text-[#b7b1a9] md:flex-row md:items-center md:justify-between md:px-8">
           <p>© {new Date().getFullYear()} 七智 ZenSeven。七仔、七仔同行为产品名。页面为结构复刻后的品牌替换，非正式发布站点。</p>
-          <p>支付方式、认证与注册状态待确认。当前仅简体中文。</p>
+          <p>戒指为友宏医疗 JCRing X3，注册证号湘械注准20262070401。七仔不是其医疗配套小程序。</p>
         </div>
       </div>
     </footer>

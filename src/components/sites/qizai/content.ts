@@ -3,8 +3,43 @@ export const brand = {
   companion: "七仔同行",
   company: "七智",
   companyEn: "ZenSeven",
-  ring: "七仔戒指",
+  ring: "JCRing X3",
 } as const;
+
+/** Hardware facts taken from the JD listing for sku 10237633697326 (友宏医疗 JCRing X3 医疗版). */
+export const jcring = {
+  jdUrl: "https://item.jd.com/10237633697326.html",
+  title: "友宏医疗 JCRing X3 医疗版",
+  model: "X3",
+  deviceName: "穿戴式脉搏血氧仪",
+  brandName: "友宏医疗",
+  maker: "湖南友宏医疗科技有限公司",
+  operator: "广东友宏医疗科技有限公司",
+  registration: "湘械注准20262070401",
+  intendedUse: "供临床无创估算监测成人动脉血氧饱和度和脉率",
+  material: "钛合金",
+  width: "8.0 mm",
+  thickness: "2.7 mm",
+  weight: "约 3–4 g，随尺码变化",
+  sensors: "PPG 传感器、3D 加速度计、BLE 5.0",
+  charge: "小于 90 分钟",
+  batteryLife: "常规使用场景约 7 天，以实际使用为准",
+  battery: "15.5–23.5 mAh，锂聚合物，不可更换",
+  water: "5ATM",
+  waterLimit:
+    "不适用于游泳池或海滨游泳等浅水域水上活动，也不适用于潜水、跳水、热淋浴、泡温泉、蒸桑拿或高速水流。防水会随日常磨损下降。",
+} as const;
+
+export const ringSizes = [
+  { size: "7", diameter: "17.4 mm" },
+  { size: "8", diameter: "18.2 mm" },
+  { size: "9", diameter: "19.0 mm" },
+  { size: "10", diameter: "19.7 mm" },
+  { size: "11", diameter: "20.7 mm" },
+  { size: "12", diameter: "21.5 mm" },
+  { size: "13", diameter: "22.3 mm" },
+  { size: "14", diameter: "23.1 mm" },
+] as const;
 
 export type NavLink = {
   label: string;
@@ -22,9 +57,9 @@ export const nav: NavGroup[] = [
   {
     label: "选购",
     links: [
-      { label: "七仔戒指", href: "/store/rings/qizai-ring", description: "睡眠与情绪的随身硬件" },
-      { label: "全部产品", href: "/store", description: "戒指与仍在确认的配件" },
-      { label: "尺寸", href: "/sizing", description: "试戴前先看怎么量" },
+      { label: "JCRing X3", href: "/store/rings/qizai-ring", description: "七仔使用的钛合金戒指" },
+      { label: "全部产品", href: "/store", description: "颜色、尺码与京东页" },
+      { label: "尺寸", href: "/sizing", description: "7 到 14 号内径" },
     ],
   },
   {
@@ -61,48 +96,48 @@ export const featureCards: FeatureCard[] = [
     id: "sleep",
     kicker: "睡眠与休息",
     title: "把夜晚还给自己",
-    image: "/sites/qizai/home/card-sleep.jpg",
-    body: "醒来后，七仔把昨晚的片段收成你能读完的几句：睡了多久、中间醒过、今天宜不宜再撑。它不替你下医学结论。",
+    image: "/sites/qizai/jcring/sleep-photo.jpg",
+    body: "X3 可记录夜间睡眠时长，并给出生活化参考。这些睡眠数据和建议不作诊疗依据。七仔负责把它们说成你能读完的几句。",
     href: "/how-it-works#sleep",
   },
   {
     id: "wellness",
     kicker: "情绪与陪伴",
     title: "想说的时候，七仔在",
-    image: "/sites/qizai/home/card-wellness.jpg",
-    body: "你可以随时开口。七仔按你正在说的事回应，而不是假定它该主动来找你。主动触达仍待确认。",
+    image: "/sites/qizai/jcring/stress-photo.jpg",
+    body: "你可以随时开口。戒指侧的情绪记录来自日常体征，只作生活参考，不支持医学研判。七仔仍不会在你沉默时追过来。",
     href: "/membership",
   },
   {
     id: "activity",
     kicker: "活动与恢复",
     title: "动与静，都算数",
-    image: "/sites/qizai/home/card-activity.jpg",
-    body: "走了路、发了呆、早睡了一点，都可以记下来。恢复好不好，用你自己的近况对照，不和别人比。",
+    image: "/sites/qizai/jcring/activity-photo.jpg",
+    body: "商品页写明可记录跑步、骑行、跳绳、网球等 40 余种运动的时长、轨迹和步数，方便你自己统计，不作为训练处方。",
     href: "/how-it-works#move",
   },
   {
     id: "heart",
-    kicker: "身心节律",
-    title: "听见今天的起伏",
-    image: "/sites/qizai/home/card-womens.jpg",
-    body: "心跳、体温这类信号如果被记录，只用来描述你的昼夜节奏。具体传感器与精度尚未对外确认。",
+    kicker: "血氧与脉率",
+    title: "注册用途就这两项",
+    image: "/sites/qizai/jcring/spo2-photo.jpg",
+    body: "X3 的医疗器械注册范围是成人动脉血氧饱和度和脉率的无创估算监测。结果用于日常自我监测，不能代替诊断或用药。",
     href: "/health-radar",
   },
   {
     id: "women",
     kicker: "女性身心",
     title: "周期里的休息，也可以被看见",
-    image: "/sites/qizai/home/card-heart.jpg",
-    body: "若你愿意，可以把经期前后的睡眠和心情放在一起看。七仔不做排卵预测，也不提供避孕建议。",
+    image: "/sites/qizai/jcring/women-photo.jpg",
+    body: "商品页写的是记录基础体温、心率、心率变异性和经期症状，帮你留存周期作息。只作个人生活记录，不做排卵预测或避孕建议。",
     href: "/stories/boundaries",
   },
   {
     id: "stress",
     kicker: "压力",
     title: "看清今天的松与紧",
-    image: "/sites/qizai/home/card-stress.jpg",
-    body: "紧的时候不必立刻改掉生活。先看见它，再决定要不要跟七仔聊聊，或者今天早一点停下来。",
+    image: "/sites/qizai/jcring/heart-photo.jpg",
+    body: "商品页写明：仅在静止状态下记录日常压力，可提供深呼吸调节的参考指引。测量结果不能用于诊断和治疗。",
     href: "/how-it-works#mood",
   },
 ];
@@ -148,12 +183,9 @@ export const notes = [
 ] as const;
 
 export const finishes = [
-  { id: "silver", name: "银", note: "日常色", image: "/sites/qizai/product/finish-silver.png", life: "/sites/qizai/product/life-silver.jpg" },
-  { id: "black", name: "黑", note: "日常色", image: "/sites/qizai/product/finish-black.png", life: "/sites/qizai/product/life-black.jpg" },
-  { id: "gold", name: "金", note: "外观待确认", image: "/sites/qizai/product/finish-gold.png", life: "/sites/qizai/product/life-gold.jpg" },
-  { id: "rose", name: "玫瑰", note: "外观待确认", image: "/sites/qizai/product/finish-rose.png", life: "/sites/qizai/product/life-rose.jpg" },
-  { id: "stealth", name: "哑光黑", note: "外观待确认", image: "/sites/qizai/product/finish-stealth.png", life: "/sites/qizai/product/life-stealth.jpg" },
-  { id: "brushed", name: "拉丝银", note: "外观待确认", image: "/sites/qizai/product/finish-brushed.png", life: "/sites/qizai/product/life-brushed.jpg" },
+  { id: "silver", name: "钛空银", note: "京东在售", image: "/sites/qizai/jcring/silver.png", life: "/sites/qizai/jcring/silver.png" },
+  { id: "black", name: "曜石黑", note: "京东在售", image: "/sites/qizai/jcring/black.png", life: "/sites/qizai/jcring/black.png" },
+  { id: "gold", name: "暮光金", note: "京东在售", image: "/sites/qizai/jcring/gold.png", life: "/sites/qizai/jcring/gold.png" },
 ] as const;
 
 export const sensingTabs = [
@@ -161,9 +193,9 @@ export const sensingTabs = [
     id: "sleep",
     label: "睡眠",
     items: [
-      { title: "睡眠概览", body: "用你能读完的几句话，回答「昨晚怎么样」。分数如果出现，只是对照你自己的近期，不是体检报告。" },
-      { title: "夜间片段", body: "深睡、浅睡、中途醒来可以被分开看。分期准确率尚未公布，页面上不写百分比。" },
-      { title: "入睡提醒", body: "若你打开它，七仔可以在你习惯的时间前提一句该收了。默认不主动打扰。" },
+      { title: "睡眠时长", body: "商品页写明可自动记录夜间睡眠时长，并结合日常作息给出生活化参考。结果和建议不作诊疗依据。" },
+      { title: "七仔来读", body: "早上你可以让七仔把昨夜收成几句人话。它不把睡眠分期百分比写成七仔自己的临床结论。" },
+      { title: "不主动催睡", body: "你可以随时开口。商品名里有震动提醒，但触发条件以说明书为准，七仔不把主动来电写成已有能力。" },
     ],
   },
   {
@@ -171,7 +203,7 @@ export const sensingTabs = [
     label: "情绪",
     items: [
       { title: "随时可聊", body: "打开就能说。七仔按你的话回应，并可以对照昨夜的休息。它不是危机热线。" },
-      { title: "松与紧", body: "白天的紧，可以和睡眠、活动放在同一张时间线上。压力算法的细节待确认。" },
+      { title: "静止时的压力", body: "商品页写明设备仅支持静止状态下的日常压力记录，并可提供深呼吸调节参考。不能用于诊断。" },
       { title: "诊后记录", body: "把这一周想告诉医生的话留在同一处。如何对接门诊，仍待确认。" },
     ],
   },
@@ -179,16 +211,16 @@ export const sensingTabs = [
     id: "move",
     label: "活动",
     items: [
-      { title: "动过，就记一笔", body: "走路和明显的活动可以被看见。能自动识别多少种运动，尚未确认，所以这里不列举项目。" },
-      { title: "恢复", body: "今天宜动还是宜缓，用你自己的近况来说，不承诺提高运动成绩。" },
+      { title: "四十余种模式", body: "商品页列举跑步、骑行、跳绳、网球等 40 余种，记录时长、轨迹和日常步数。这是非医疗的生活记录。" },
+      { title: "恢复仍由你判断", body: "七仔可以把活动和昨夜放在一起看，不承诺提高运动成绩。" },
     ],
   },
   {
     id: "body",
     label: "身体信号",
     items: [
-      { title: "夜里的信号", body: "心率、体温趋势、血氧若被采集，只作为 wellness 记录。传感器清单与精度待确认。" },
-      { title: "不做诊断", body: "七仔不判断疾病，不替代问诊，也不建议你停药或改方案。" },
+      { title: "注册范围内", body: "血氧饱和度和脉率是这枚戒指经注册核准的医疗功能。官方读取入口是配套微信小程序，不是七仔对话本身。" },
+      { title: "不做诊断", body: "检测结果不可作为临床诊断、筛查及指导用药的依据，也不能替代医疗机构的诊断与治疗。" },
     ],
   },
 ] as const;
@@ -204,9 +236,9 @@ export const dayBeats = [
 export const faqs = [
   { q: "没有戒指，可以和七仔聊天吗？", a: "陪伴对话是七仔同行的一部分。没有戒指时，夜间身体信号会缺失，能对照的上下文会少很多。仅对话的开放范围待确认。" },
   { q: "七仔会主动找我吗？", a: "当前对外说法是：你可以随时开口。主动推送、主动语音或主动问诊都尚未确认，页面上不写成已有能力。" },
-  { q: "这是医疗器械吗？会诊断吗？", a: "不能。七仔与戒指用于心理健康陪伴和日常记录，不诊断、不治疗、不替代医生。认证与注册状态待确认。" },
-  { q: "戒指怎么买？多少钱？", a: "七仔戒指按一次性 ¥1299，支付宝结账。不含订阅。会员是否另收费、试用时长仍待确认。" },
-  { q: "会员怎么收费？", a: "会员是否另收费、是否订阅、试用时长都还没有公布。戒指本身是一次性 ¥1299。" },
+  { q: "这是医疗器械吗？会诊断吗？", a: "戒指是友宏医疗 JCRing X3，注册证号湘械注准20262070401，注册用途是成人血氧饱和度和脉率的无创估算监测。七仔对话不是该注册的配套小程序。睡眠、压力、情绪和运动记录在商品页中标明为非医疗功能，不能用于诊断或治疗。" },
+  { q: "戒指怎么买？多少钱？", a: "在 chanring 上按一次性 ¥1299 支付宝结账，不含订阅。京东同款页另售，价格以京东为准。会员是否另收费仍待确认。" },
+  { q: "会员怎么收费？", a: "会员是否另收费、是否订阅、试用时长都还没有公布。戒指本身在本站是一次性 ¥1299。" },
   { q: "数据会卖掉吗？", a: "产品原则是不出售个人健康数据，分享前需要你的同意。正式隐私文本以法务定稿为准，见隐私说明中的待确认项。" },
   { q: "换一枚戒指，记录还在吗？", a: "账号若保留，记录应留在七仔同行里，而不是锁在某一枚硬件上。迁移细节待确认。" },
 ] as const;

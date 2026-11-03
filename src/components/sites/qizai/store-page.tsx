@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { finishes } from "./content";
+import { finishes, jcring, ringSizes } from "./content";
 import { PageShell } from "./site-chrome";
 
 export function StorePage() {
@@ -11,9 +11,11 @@ export function StorePage() {
           <h1 className="qz-h2 mt-3 max-w-3xl">
             从陪伴开始，
             <br />
-            而不是从价格开始。
+            戒指是 JCRing X3。
           </h1>
-          <p className="mt-5 max-w-xl text-[17px] leading-relaxed">七仔戒指一次性 ¥1299（支付宝）。退换政策与会员是否另收费待确认。</p>
+          <p className="mt-5 max-w-xl text-[17px] leading-relaxed">
+            钛空银、曜石黑、暮光金，尺码 {ringSizes[0].size}–{ringSizes[ringSizes.length - 1].size} 号。本站一次性 ¥1299，支付宝结账。京东同款另售。
+          </p>
           <Link href="/checkout" className="qz-btn qz-btn-blue mt-6 inline-flex">
             ¥1299 一次性购买
           </Link>
@@ -22,11 +24,11 @@ export function StorePage() {
       <section className="bg-[#f7f1e8] px-5 pb-20 md:px-8">
         <div className="mx-auto grid max-w-[1100px] gap-6 md:grid-cols-[1.2fr_0.8fr]">
           <Link href="/store/rings/qizai-ring" className="overflow-hidden rounded-[28px] bg-[#ece6dc]">
-            <img src="/sites/qizai/product/life-silver.jpg" alt="银色戒指佩戴" className="h-80 w-full object-cover" />
+            <img src="/sites/qizai/jcring/silver.png" alt="钛空银 JCRing X3" className="h-80 w-full object-contain" />
             <div className="flex items-end justify-between p-6">
               <div>
-                <p className="text-sm text-[#6a6560]">现在能看的</p>
-                <h2 className="qz-serif mt-1 text-4xl">七仔戒指</h2>
+                <p className="text-sm text-[#6a6560]">{jcring.brandName}</p>
+                <h2 className="qz-serif mt-1 text-4xl">JCRing X3</h2>
               </div>
               <p className="text-sm">¥1299 一次性</p>
             </div>
@@ -34,10 +36,10 @@ export function StorePage() {
           <div className="rounded-[28px] bg-[#1c1b1a] p-6 text-[#f7f1e8]">
             <h2 className="qz-serif text-3xl">买之前可以确认的</h2>
             <ul className="mt-6 space-y-4 text-[15px] leading-relaxed text-white/85">
-              <li>尺寸以试戴为准，线上尺码表待确认。</li>
-              <li>退换期限待确认，页面不写「30 天无理由」。</li>
-              <li>会员是否另收费，待确认。</li>
-              <li>支持时段待确认。紧急情况请联系当地服务。</li>
+              <li>内径对照来自京东尺码名称，晚上手会略肿，拿不准就量两次。</li>
+              <li>本站订单走支付宝。京东退换以商品页当时规则为准。</li>
+              <li>七仔同行是否另收费，仍待确认。</li>
+              <li>血氧和脉率的注册读数在官方小程序。紧急情况请联系当地服务。</li>
             </ul>
             <Link href="/sizing" className="qz-btn qz-btn-light mt-8 inline-flex">
               怎么量手指
