@@ -166,7 +166,7 @@ export function HomePage() {
               了解边界
             </Link>
           </div>
-          <div className="rounded-[28px] bg-[#1c1b1a] px-4 py-8 md:px-8">
+          <div className="rounded-[28px] bg-[#efe6da] px-4 py-8 md:px-8">
             <div className="grid grid-cols-3 gap-3">
               <MiniPhone title="睡眠起伏" line="昨夜醒过两次，今天宜缓。" />
               <MiniPhone title="情绪" line="想说的时候再打开。现在没有主动来电。" accent />
@@ -231,22 +231,62 @@ export function HomePage() {
 
 function PhoneRow() {
   return (
-    <div className="mx-auto mt-14 flex max-w-5xl items-end justify-center gap-3 overflow-hidden px-2 md:gap-5">
-      <Phone label="松紧" score="偏紧" detail="下午见过一个人。对照昨夜，今天可以早一点停。" />
-      <Phone label="今日" score="可聊" detail="七仔在。你开口之前，它不追问。" featured />
-      <Phone label="睡眠" score="一夜" detail="中间醒过。深浅片段只作记录，不作诊断。" />
+    <div className="mx-auto mt-16 flex max-w-4xl items-end justify-center gap-4 px-2 md:gap-8">
+      <Phone
+        label="松紧"
+        score="偏紧"
+        detail="下午见过一个人。对照昨夜，今天可以早一点停。"
+        stroke="#c9845a"
+        path="M2 28 C18 28 22 10 38 16 S58 32 74 20 98 8 118 18"
+      />
+      <Phone
+        label="今日"
+        score="可聊"
+        detail="七仔在。你开口之前，它不追问。"
+        featured
+        stroke="#2a72de"
+        path="M2 22 C16 22 24 30 40 24 S62 8 78 14 100 28 118 16"
+      />
+      <Phone
+        label="睡眠"
+        score="一夜"
+        detail="中间醒过。深浅片段只作记录，不作诊断。"
+        stroke="#7d8f72"
+        path="M2 18 C14 18 20 28 36 26 S58 12 76 16 102 24 118 14"
+      />
     </div>
   );
 }
 
-function Phone({ label, score, detail, featured = false }: { label: string; score: string; detail: string; featured?: boolean }) {
+function Phone({
+  label,
+  score,
+  detail,
+  stroke,
+  path,
+  featured = false,
+}: {
+  label: string;
+  score: string;
+  detail: string;
+  stroke: string;
+  path: string;
+  featured?: boolean;
+}) {
   return (
-    <div className={`w-[30%] max-w-[240px] rounded-[28px] bg-[#161614] p-3 text-left text-[#f4efe8] shadow-2xl ${featured ? "mb-0 scale-105" : "mb-6 opacity-95"}`}>
-      <div className="rounded-[22px] bg-gradient-to-b from-[#2a3142] to-[#141816] px-3 py-4">
-        <p className="text-[11px] text-white/60">{label}</p>
-        <p className="qz-serif mt-6 text-3xl">{score}</p>
-        <p className="mt-3 text-[12px] leading-relaxed text-white/80">{detail}</p>
-        <div className="mt-6 h-16 rounded-xl bg-white/10" />
+    <div className={`w-[31%] max-w-[230px] ${featured ? "z-10" : "mb-6 opacity-[0.96]"}`}>
+      <div
+        className={`rounded-[1.85rem] bg-[#fbf7f2] p-1.5 shadow-[0_18px_40px_rgba(74,58,42,0.12)] ring-1 ring-[#2c2a26]/10 ${featured ? "shadow-[0_28px_60px_rgba(74,58,42,0.16)]" : ""}`}
+      >
+        <div className="overflow-hidden rounded-[1.45rem] bg-gradient-to-b from-[#fffdfb] to-[#f3ebe3] px-3.5 pb-4 pt-3 text-left text-[#2c2a26]">
+          <div className="mx-auto mb-4 h-1 w-9 rounded-full bg-[#2c2a26]/15" />
+          <p className="text-[11px] tracking-[0.14em] text-[#8a8178]">{label}</p>
+          <p className="qz-serif mt-3 text-[1.85rem] leading-none">{score}</p>
+          <p className="mt-3 min-h-[3.6rem] text-[12.5px] leading-relaxed text-[#5c564f]">{detail}</p>
+          <svg viewBox="0 0 120 36" className="mt-2 h-9 w-full" aria-hidden>
+            <path d={path} fill="none" stroke={stroke} strokeWidth="2.2" strokeLinecap="round" />
+          </svg>
+        </div>
       </div>
     </div>
   );
@@ -254,11 +294,11 @@ function Phone({ label, score, detail, featured = false }: { label: string; scor
 
 function MiniPhone({ title, line, accent = false }: { title: string; line: string; accent?: boolean }) {
   return (
-    <div className={`rounded-[18px] px-2 py-3 text-left text-white ${accent ? "bg-[#243044]" : "bg-[#2a2a28]"}`}>
-      <p className="text-[10px] text-white/55">9:41</p>
-      <p className="qz-serif mt-6 text-sm md:text-base">{title}</p>
-      <p className="mt-2 text-[11px] leading-snug text-white/75 md:text-[13px]">{line}</p>
-      <div className="mt-4 h-10 rounded-lg bg-white/10" />
+    <div className={`rounded-[1.35rem] bg-[#fbf7f2] px-2.5 py-3 text-left text-[#2c2a26] shadow-sm ring-1 ring-[#2c2a26]/8 ${accent ? "ring-[#2a72de]/30" : ""}`}>
+      <p className="text-[10px] tracking-wide text-[#8a8178]">9:41</p>
+      <p className="qz-serif mt-5 text-sm leading-tight md:text-base">{title}</p>
+      <p className="mt-2 text-[11px] leading-snug text-[#5c564f] md:text-[13px]">{line}</p>
+      <div className={`mt-4 h-1.5 w-2/3 rounded-full ${accent ? "bg-[#2a72de]" : "bg-[#c9845a]/70"}`} />
     </div>
   );
 }
